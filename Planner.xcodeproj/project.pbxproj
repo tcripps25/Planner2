@@ -11,6 +11,10 @@
 		A93A6EC32B42C87800FE1294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6EC22B42C87800FE1294 /* ContentView.swift */; };
 		A93A6EC52B42C87900FE1294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93A6EC42B42C87900FE1294 /* Assets.xcassets */; };
 		A93A6EC82B42C87900FE1294 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93A6EC72B42C87900FE1294 /* Preview Assets.xcassets */; };
+		A93A6ED12B42D05000FE1294 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6ED02B42D05000FE1294 /* Plan.swift */; };
+		A93A6ED32B42D2E400FE1294 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6ED22B42D2E400FE1294 /* PlanView.swift */; };
+		A93A6ED52B42DC4200FE1294 /* ChoosePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6ED42B42DC4200FE1294 /* ChoosePlanView.swift */; };
+		A93A6ED72B432A0600FE1294 /* EditPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6ED62B432A0600FE1294 /* EditPlanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		A93A6EC22B42C87800FE1294 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A93A6EC42B42C87900FE1294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93A6EC72B42C87900FE1294 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A93A6ED02B42D05000FE1294 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		A93A6ED22B42D2E400FE1294 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
+		A93A6ED42B42DC4200FE1294 /* ChoosePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlanView.swift; sourceTree = "<group>"; };
+		A93A6ED62B432A0600FE1294 /* EditPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				A93A6EC02B42C87800FE1294 /* PlannerApp.swift */,
 				A93A6EC22B42C87800FE1294 /* ContentView.swift */,
+				A93A6ED42B42DC4200FE1294 /* ChoosePlanView.swift */,
+				A93A6ED62B432A0600FE1294 /* EditPlanView.swift */,
+				A93A6ED22B42D2E400FE1294 /* PlanView.swift */,
+				A93A6ED02B42D05000FE1294 /* Plan.swift */,
 				A93A6EC42B42C87900FE1294 /* Assets.xcassets */,
 				A93A6EC62B42C87900FE1294 /* Preview Content */,
 			);
@@ -139,6 +151,10 @@
 			files = (
 				A93A6EC32B42C87800FE1294 /* ContentView.swift in Sources */,
 				A93A6EC12B42C87800FE1294 /* PlannerApp.swift in Sources */,
+				A93A6ED52B42DC4200FE1294 /* ChoosePlanView.swift in Sources */,
+				A93A6ED12B42D05000FE1294 /* Plan.swift in Sources */,
+				A93A6ED32B42D2E400FE1294 /* PlanView.swift in Sources */,
+				A93A6ED72B432A0600FE1294 /* EditPlanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

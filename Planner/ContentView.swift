@@ -6,19 +6,32 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @State var selectedPlan: Plan?
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        if selectedPlan != nil {
+            PlanView(plan: $selectedPlan)
+        } else {
+            ChoosePlanView(selectedPlan: $selectedPlan)
         }
-        .padding()
     }
+    
 }
 
 #Preview {
-    ContentView()
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: Plan.self, configurations: config)
+
+        let example = Plan(name: "Test Plan", date: DateInterval(), details: "Plan details here")
+        return ContentView(selectedPlan: example)
+            .modelContainer(container)
+    } catch {
+        fatalError("Failed to create model container.")
+    }
 }

@@ -6,3 +6,19 @@
 //
 
 import Foundation
+import SwiftData
+
+@Model
+class Plan {
+    var name: String
+    var date: DateInterval
+    var details: String
+    var selectedTab: String
+    
+    init(name: String = "", date: DateInterval = DateInterval(), details: String = "", selectedTab: String = "plan") {
+        self.name = name
+        self.date = date
+        self.details = details
+        self.selectedTab = selectedTab
+    }
+}
