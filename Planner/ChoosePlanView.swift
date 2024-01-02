@@ -12,6 +12,7 @@ struct ChoosePlanView: View {
     @Query var plans: [Plan]
     @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
+    
     @Binding var selectedPlan: Plan?
     @State var onSheet: Bool?
     
@@ -70,15 +71,15 @@ struct ChoosePlanView: View {
     }
 }
 
-/* #Preview {
+#Preview {
     do {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: Plan.self, configurations: config)
 
         @State var example = Plan(name: "Test Plan", date: DateInterval(), details: "Plan details here")
-        return ChoosePlanView(selectedPlan: example)
+        return ChoosePlanView(selectedPlan: .constant(example))
             .modelContainer(container)
     } catch {
         fatalError("Failed to create model container.")
     }
-} */
+}

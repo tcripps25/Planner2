@@ -10,7 +10,7 @@ import SwiftData
 
 struct PlanView: View {
     @Binding var plan: Plan?
-    @State private var showingPlanChooser = false
+    
     
     
     var body: some View {
@@ -19,42 +19,39 @@ struct PlanView: View {
         
         TabView() {
             NavigationStack {
-                Text(plan?.name ?? "No Plan Found")
-                    .toolbar {
-                    Button("Choose Plan") {
-                        showingPlanChooser.toggle()
+                ItineraryView(plan: $plan)
+            }
+                .tag("Itinerary")
+                    .tabItem {
+                        Label("Itinerary", systemImage: "list.star")
                     }
-                }
-            }.tag("plan")
-                .tabItem {
-                    Label("Plan", systemImage: "list.star")
-                }
-            
-            Text("Wishes")
-                .tag("wishes")
+            NavigationStack {
+                WishesView(plan: $plan)
+            }
+                .tag("Wishes")
                 .tabItem {
                     Label("Wishes", systemImage: "star")
                 }
-            EditPlanView(plan: plan!)
-                .tag("settings")
+            NavigationStack {
+                EditPlanView(plan: plan!, selectedPlan: $plan)
+            }
+                .tag("Settings")
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
-        }.sheet(isPresented: $showingPlanChooser) {
-            ChoosePlanView(selectedPlan: $plan, onSheet: true)
         }
     }
 }
 
-/* #Preview {
+ #Preview {
     do {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: Plan.self, configurations: config)
 
-        @State var example = Plan(name: "Test Plan", date: DateInterval(), details: "Plan details here")
-        return PlanView(plan: example)
+        let example = Plan(name: "Test Plan", date: DateInterval(), details: "Plan details here")
+        return PlanView(plan: .constant(example))
             .modelContainer(container)
     } catch {
         fatalError("Failed to create model container.")
     }
-} */
+}

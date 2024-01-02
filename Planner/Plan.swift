@@ -15,7 +15,7 @@ class Plan {
     var details: String
     var selectedTab: String
     
-    init(name: String = "", date: DateInterval = DateInterval(), details: String = "", selectedTab: String = "plan") {
+    init(name: String = "", date: DateInterval = DateInterval(), details: String = "", selectedTab: String = "Itinerary") {
         self.name = name
         self.date = date
         self.details = details

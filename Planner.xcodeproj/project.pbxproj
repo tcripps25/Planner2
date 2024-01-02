@@ -15,6 +15,8 @@
 		A93A6ED32B42D2E400FE1294 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6ED22B42D2E400FE1294 /* PlanView.swift */; };
 		A93A6ED52B42DC4200FE1294 /* ChoosePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6ED42B42DC4200FE1294 /* ChoosePlanView.swift */; };
 		A93A6ED72B432A0600FE1294 /* EditPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6ED62B432A0600FE1294 /* EditPlanView.swift */; };
+		A93A6ED92B444C4700FE1294 /* ItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6ED82B444C4700FE1294 /* ItineraryView.swift */; };
+		A93A6EDB2B444F4000FE1294 /* WishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6EDA2B444F4000FE1294 /* WishesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		A93A6ED22B42D2E400FE1294 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
 		A93A6ED42B42DC4200FE1294 /* ChoosePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlanView.swift; sourceTree = "<group>"; };
 		A93A6ED62B432A0600FE1294 /* EditPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlanView.swift; sourceTree = "<group>"; };
+		A93A6ED82B444C4700FE1294 /* ItineraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryView.swift; sourceTree = "<group>"; };
+		A93A6EDA2B444F4000FE1294 /* WishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				A93A6ED42B42DC4200FE1294 /* ChoosePlanView.swift */,
 				A93A6ED62B432A0600FE1294 /* EditPlanView.swift */,
 				A93A6ED22B42D2E400FE1294 /* PlanView.swift */,
+				A93A6EDA2B444F4000FE1294 /* WishesView.swift */,
+				A93A6ED82B444C4700FE1294 /* ItineraryView.swift */,
 				A93A6ED02B42D05000FE1294 /* Plan.swift */,
 				A93A6EC42B42C87900FE1294 /* Assets.xcassets */,
 				A93A6EC62B42C87900FE1294 /* Preview Content */,
@@ -150,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93A6EC32B42C87800FE1294 /* ContentView.swift in Sources */,
+				A93A6EDB2B444F4000FE1294 /* WishesView.swift in Sources */,
+				A93A6ED92B444C4700FE1294 /* ItineraryView.swift in Sources */,
 				A93A6EC12B42C87800FE1294 /* PlannerApp.swift in Sources */,
 				A93A6ED52B42DC4200FE1294 /* ChoosePlanView.swift in Sources */,
 				A93A6ED12B42D05000FE1294 /* Plan.swift in Sources */,
