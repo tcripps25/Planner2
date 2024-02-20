@@ -10,9 +10,13 @@ import SwiftData
 
 @main
 struct PlannerApp: App {
+    @StateObject var appState = AppState()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(appState)
         }.modelContainer(for: Plan.self)
+            
     }
 }

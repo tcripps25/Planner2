@@ -13,7 +13,7 @@ struct ChoosePlanView: View {
     @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     
-    @Binding var selectedPlan: Plan?
+    @Binding var currentPlan: Plan?
     @State var onSheet: Bool?
     
     var body: some View {
@@ -23,8 +23,9 @@ struct ChoosePlanView: View {
             List {
                 ForEach(plans) { plan in
                         Button (action: {
-                            selectedPlan = plan
-                            if selectedPlan != nil {
+                            currentPlan = plan
+                            
+                            if currentPlan != nil {
                                 if onSheet ?? false {
                                     dismiss()
                                 }
@@ -42,7 +43,7 @@ struct ChoosePlanView: View {
                     
                 }.onDelete(perform: deletePlans)
             }.toolbar {
-                MainToolbarView(plan: $selectedPlan)
+                MainToolbarView(plan: $currentPlan)
             }
         }
     }
@@ -64,7 +65,7 @@ struct ChoosePlanView: View {
         let container = try ModelContainer(for: Plan.self, configurations: config)
 
         @State var example = Plan(name: "Test Plan", date: DateInterval(), details: "Plan details here")
-        return ChoosePlanView(selectedPlan: .constant(example))
+        return ChoosePlanView(currentPlan: .constant(example))
             .modelContainer(container)
     } catch {
         fatalError("Failed to create model container.")

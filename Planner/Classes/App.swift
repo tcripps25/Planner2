@@ -7,13 +7,13 @@
 
 import Foundation
 
-class App {
+class AppState: ObservableObject {
     enum State {
         case unselected
         case selected(Plan)
     }
     
-    var state: State = .unselected
+    @Published var state: State = .unselected
 }
 
 

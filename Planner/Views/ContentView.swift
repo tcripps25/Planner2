@@ -9,16 +9,16 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State var selectedPlan: Plan?
+    @EnvironmentObject var appState: AppState
+    @State var plan: Plan?
     
     
     var body: some View {
-        
-        if selectedPlan != nil {
-            PlanView(plan: $selectedPlan)
-        } else {
-            ChoosePlanView(selectedPlan: $selectedPlan)
-        }
+        if plan != nil {
+            PlanView(plan: $plan)
+            } else {
+                ChoosePlanView(currentPlan: $plan)
+            }
     }
     
 }
@@ -29,7 +29,7 @@ struct ContentView: View {
         let container = try ModelContainer(for: Plan.self, configurations: config)
 
         let example = Plan(name: "Test Plan", date: DateInterval(), details: "Plan details here")
-        return ContentView(selectedPlan: example)
+        return ContentView(plan: example)
             .modelContainer(container)
     } catch {
         fatalError("Failed to create model container.")

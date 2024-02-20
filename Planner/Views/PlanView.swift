@@ -11,8 +11,7 @@ import SwiftData
 struct PlanView: View {
     @Binding var plan: Plan?
     
-    
-    
+
     var body: some View {
         
         
@@ -33,9 +32,9 @@ struct PlanView: View {
             NavigationStack {
                 TimesView(plan: $plan)
             }
-                .tag("Times")
+                .tag("Info")
                 .tabItem {
-                    Label("Times", systemImage: "clock")
+                    Label("Info", systemImage: "chart.bar.fill")
                 }
         }
     }
@@ -45,8 +44,8 @@ struct PlanView: View {
     do {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: Plan.self, configurations: config)
-
-        let example = Plan(name: "Test Plan", date: DateInterval(), details: "Plan details here")
+        let exdest = (Destination(id: "0000", name: "Test Destination", slug: "test-dest"))
+        let example = Plan(name: "Test Plan", date: DateInterval(), details: "Plan details here", destination: exdest)
         return PlanView(plan: .constant(example))
             .modelContainer(container)
     } catch {

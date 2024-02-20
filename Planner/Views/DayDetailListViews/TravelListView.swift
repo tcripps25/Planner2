@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct TravelListView: View {
-    
+    @State var origin: String
+    @State var dest: String
     var body: some View {
         ZStack(alignment: .leading) {
             Rectangle()
-                .fill(Color.mint)
+                .fill(Color("interfaceHighlightColor"))
                 .frame(maxHeight: .infinity)
-                .frame(width: 5)
+                .frame(width: 4)
                 .offset(x: 40)
             HStack {
                     getActivityImage(for: "TRAVEL")
@@ -23,11 +24,12 @@ struct TravelListView: View {
                         .padding(.trailing, 10)
                 ZStack(alignment: .leading) {
                    
-                    VStack(alignment: .leading) {
-                        Text("Travel from XX to XX")
-                            .font(.system(size: 13))
-                            .opacity(0.7)
-                    }.padding(.all, 10)
+                    VStack(alignment: .center, spacing: 5) {
+                        Text("Switch to \(dest)")
+                        
+                    }.frame(maxWidth: .infinity).font(.system(size: 12))
+                        .opacity(0.7)
+                        .padding(.all, 10)
                 }.padding(.vertical, 5)
             }
         }.listRowInsets(EdgeInsets())

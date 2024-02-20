@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A911EBDD2B834B8E00297B15 /* DayStartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A911EBDC2B834B8E00297B15 /* DayStartListView.swift */; };
+		A911EBDF2B8350C800297B15 /* DayEndListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A911EBDE2B8350C800297B15 /* DayEndListView.swift */; };
+		A92CCA112B7B8F95009636B0 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CCA102B7B8F95009636B0 /* Destination.swift */; };
+		A92CCA132B7B985D009636B0 /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CCA122B7B985D009636B0 /* Park.swift */; };
+		A92CCA152B7BCA2C009636B0 /* SetupPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CCA142B7BCA2C009636B0 /* SetupPlanModel.swift */; };
+		A92CCA172B7CC822009636B0 /* DateFormatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CCA162B7CC822009636B0 /* DateFormatModel.swift */; };
+		A92CCA192B7CE6E4009636B0 /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CCA182B7CE6E4009636B0 /* AddActivityView.swift */; };
+		A92CCA1B2B7CE800009636B0 /* FetchActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CCA1A2B7CE800009636B0 /* FetchActivities.swift */; };
 		A93A6EC12B42C87800FE1294 /* PlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6EC02B42C87800FE1294 /* PlannerApp.swift */; };
 		A93A6EC32B42C87800FE1294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6EC22B42C87800FE1294 /* ContentView.swift */; };
 		A93A6EC52B42C87900FE1294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93A6EC42B42C87900FE1294 /* Assets.xcassets */; };
@@ -17,9 +25,33 @@
 		A93A6ED72B432A0600FE1294 /* EditPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6ED62B432A0600FE1294 /* EditPlanView.swift */; };
 		A93A6ED92B444C4700FE1294 /* ItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6ED82B444C4700FE1294 /* ItineraryView.swift */; };
 		A93A6EDB2B444F4000FE1294 /* WishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A6EDA2B444F4000FE1294 /* WishesView.swift */; };
+		A976F8422B7E5DBD00EEF324 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976F8412B7E5DBD00EEF324 /* App.swift */; };
+		A9D793232B76425000F9EF4C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D793222B76425000F9EF4C /* Day.swift */; };
+		A9D793292B7643DE00F9EF4C /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D793282B7643DE00F9EF4C /* Activity.swift */; };
+		A9D7932B2B7792FB00F9EF4C /* TimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7932A2B7792FB00F9EF4C /* TimesView.swift */; };
+		A9D7932D2B77938800F9EF4C /* MainToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7932C2B77938800F9EF4C /* MainToolbarView.swift */; };
+		A9D7932F2B77AD1400F9EF4C /* AddPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7932E2B77AD1400F9EF4C /* AddPlanView.swift */; };
+		A9D793312B77E8C500F9EF4C /* CalculateDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D793302B77E8C500F9EF4C /* CalculateDates.swift */; };
+		A9D793352B78D43400F9EF4C /* DayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D793342B78D43400F9EF4C /* DayDetailView.swift */; };
+		A9D793372B79136700F9EF4C /* TapLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D793362B79136700F9EF4C /* TapLabelView.swift */; };
+		A9D7934B2B7A4D0200F9EF4C /* FetchDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7934A2B7A4D0200F9EF4C /* FetchDestinations.swift */; };
+		A9ED97982B80D26E00C99DBF /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ED97972B80D26E00C99DBF /* DestinationView.swift */; };
+		A9ED979A2B80EC5200C99DBF /* AddActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ED97992B80EC5200C99DBF /* AddActivityListView.swift */; };
+		A9ED979C2B80EF1E00C99DBF /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ED979B2B80EF1E00C99DBF /* ActivityListView.swift */; };
+		A9ED979E2B80F0AF00C99DBF /* GetActivityImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ED979D2B80F0AE00C99DBF /* GetActivityImage.swift */; };
+		A9ED97A02B8251EC00C99DBF /* TravelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9ED979F2B8251EC00C99DBF /* TravelListView.swift */; };
+		A9EEC72A2B84C7E60074C797 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EEC7292B84C7E60074C797 /* ActivityDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A911EBDC2B834B8E00297B15 /* DayStartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayStartListView.swift; sourceTree = "<group>"; };
+		A911EBDE2B8350C800297B15 /* DayEndListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEndListView.swift; sourceTree = "<group>"; };
+		A92CCA102B7B8F95009636B0 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		A92CCA122B7B985D009636B0 /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
+		A92CCA142B7BCA2C009636B0 /* SetupPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPlanModel.swift; sourceTree = "<group>"; };
+		A92CCA162B7CC822009636B0 /* DateFormatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatModel.swift; sourceTree = "<group>"; };
+		A92CCA182B7CE6E4009636B0 /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
+		A92CCA1A2B7CE800009636B0 /* FetchActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchActivities.swift; sourceTree = "<group>"; };
 		A93A6EBD2B42C87800FE1294 /* Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93A6EC02B42C87800FE1294 /* PlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerApp.swift; sourceTree = "<group>"; };
 		A93A6EC22B42C87800FE1294 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +63,22 @@
 		A93A6ED62B432A0600FE1294 /* EditPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlanView.swift; sourceTree = "<group>"; };
 		A93A6ED82B444C4700FE1294 /* ItineraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryView.swift; sourceTree = "<group>"; };
 		A93A6EDA2B444F4000FE1294 /* WishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishesView.swift; sourceTree = "<group>"; };
+		A976F8412B7E5DBD00EEF324 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		A9D793222B76425000F9EF4C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		A9D793282B7643DE00F9EF4C /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		A9D7932A2B7792FB00F9EF4C /* TimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesView.swift; sourceTree = "<group>"; };
+		A9D7932C2B77938800F9EF4C /* MainToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToolbarView.swift; sourceTree = "<group>"; };
+		A9D7932E2B77AD1400F9EF4C /* AddPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanView.swift; sourceTree = "<group>"; };
+		A9D793302B77E8C500F9EF4C /* CalculateDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateDates.swift; sourceTree = "<group>"; };
+		A9D793342B78D43400F9EF4C /* DayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailView.swift; sourceTree = "<group>"; };
+		A9D793362B79136700F9EF4C /* TapLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapLabelView.swift; sourceTree = "<group>"; };
+		A9D7934A2B7A4D0200F9EF4C /* FetchDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDestinations.swift; sourceTree = "<group>"; };
+		A9ED97972B80D26E00C99DBF /* DestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
+		A9ED97992B80EC5200C99DBF /* AddActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityListView.swift; sourceTree = "<group>"; };
+		A9ED979B2B80EF1E00C99DBF /* ActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListView.swift; sourceTree = "<group>"; };
+		A9ED979D2B80F0AE00C99DBF /* GetActivityImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetActivityImage.swift; sourceTree = "<group>"; };
+		A9ED979F2B8251EC00C99DBF /* TravelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelListView.swift; sourceTree = "<group>"; };
+		A9EEC7292B84C7E60074C797 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A911EBE02B8351E300297B15 /* DayDetailListViews */ = {
+			isa = PBXGroup;
+			children = (
+				A9ED979F2B8251EC00C99DBF /* TravelListView.swift */,
+				A92CCA182B7CE6E4009636B0 /* AddActivityView.swift */,
+				A9ED979B2B80EF1E00C99DBF /* ActivityListView.swift */,
+				A911EBDC2B834B8E00297B15 /* DayStartListView.swift */,
+				A911EBDE2B8350C800297B15 /* DayEndListView.swift */,
+			);
+			path = DayDetailListViews;
+			sourceTree = "<group>";
+		};
 		A93A6EB42B42C87800FE1294 = {
 			isa = PBXGroup;
 			children = (
@@ -63,14 +123,11 @@
 		A93A6EBF2B42C87800FE1294 /* Planner */ = {
 			isa = PBXGroup;
 			children = (
+				A976F8402B7E347600EEF324 /* ViewModels */,
+				A976F83F2B7E344200EEF324 /* Models */,
+				A9D793432B7A08B200F9EF4C /* Views */,
 				A93A6EC02B42C87800FE1294 /* PlannerApp.swift */,
-				A93A6EC22B42C87800FE1294 /* ContentView.swift */,
-				A93A6ED42B42DC4200FE1294 /* ChoosePlanView.swift */,
-				A93A6ED62B432A0600FE1294 /* EditPlanView.swift */,
-				A93A6ED22B42D2E400FE1294 /* PlanView.swift */,
-				A93A6EDA2B444F4000FE1294 /* WishesView.swift */,
-				A93A6ED82B444C4700FE1294 /* ItineraryView.swift */,
-				A93A6ED02B42D05000FE1294 /* Plan.swift */,
+				A9D793402B7A087300F9EF4C /* Classes */,
 				A93A6EC42B42C87900FE1294 /* Assets.xcassets */,
 				A93A6EC62B42C87900FE1294 /* Preview Content */,
 			);
@@ -83,6 +140,70 @@
 				A93A6EC72B42C87900FE1294 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A976F83F2B7E344200EEF324 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A92CCA142B7BCA2C009636B0 /* SetupPlanModel.swift */,
+				A92CCA162B7CC822009636B0 /* DateFormatModel.swift */,
+			);
+			name = Models;
+			path = Views/Models;
+			sourceTree = "<group>";
+		};
+		A976F8402B7E347600EEF324 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A9D793302B77E8C500F9EF4C /* CalculateDates.swift */,
+				A9D7934A2B7A4D0200F9EF4C /* FetchDestinations.swift */,
+				A92CCA1A2B7CE800009636B0 /* FetchActivities.swift */,
+				A9ED979D2B80F0AE00C99DBF /* GetActivityImage.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A9D793402B7A087300F9EF4C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A976F8412B7E5DBD00EEF324 /* App.swift */,
+				A9D793442B7A1BC100F9EF4C /* User */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A9D793432B7A08B200F9EF4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A93A6EC22B42C87800FE1294 /* ContentView.swift */,
+				A93A6ED42B42DC4200FE1294 /* ChoosePlanView.swift */,
+				A93A6ED62B432A0600FE1294 /* EditPlanView.swift */,
+				A9D7932E2B77AD1400F9EF4C /* AddPlanView.swift */,
+				A93A6ED22B42D2E400FE1294 /* PlanView.swift */,
+				A93A6EDA2B444F4000FE1294 /* WishesView.swift */,
+				A9D793342B78D43400F9EF4C /* DayDetailView.swift */,
+				A911EBE02B8351E300297B15 /* DayDetailListViews */,
+				A9EEC7292B84C7E60074C797 /* ActivityDetailView.swift */,
+				A93A6ED82B444C4700FE1294 /* ItineraryView.swift */,
+				A9ED97972B80D26E00C99DBF /* DestinationView.swift */,
+				A9D793362B79136700F9EF4C /* TapLabelView.swift */,
+				A9ED97992B80EC5200C99DBF /* AddActivityListView.swift */,
+				A9D7932A2B7792FB00F9EF4C /* TimesView.swift */,
+				A9D7932C2B77938800F9EF4C /* MainToolbarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A9D793442B7A1BC100F9EF4C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A93A6ED02B42D05000FE1294 /* Plan.swift */,
+				A9D793222B76425000F9EF4C /* Day.swift */,
+				A9D793282B7643DE00F9EF4C /* Activity.swift */,
+				A92CCA102B7B8F95009636B0 /* Destination.swift */,
+				A92CCA122B7B985D009636B0 /* Park.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,14 +276,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92CCA192B7CE6E4009636B0 /* AddActivityView.swift in Sources */,
+				A92CCA172B7CC822009636B0 /* DateFormatModel.swift in Sources */,
+				A92CCA152B7BCA2C009636B0 /* SetupPlanModel.swift in Sources */,
+				A92CCA1B2B7CE800009636B0 /* FetchActivities.swift in Sources */,
 				A93A6EC32B42C87800FE1294 /* ContentView.swift in Sources */,
 				A93A6EDB2B444F4000FE1294 /* WishesView.swift in Sources */,
+				A911EBDD2B834B8E00297B15 /* DayStartListView.swift in Sources */,
+				A9D793372B79136700F9EF4C /* TapLabelView.swift in Sources */,
 				A93A6ED92B444C4700FE1294 /* ItineraryView.swift in Sources */,
+				A92CCA112B7B8F95009636B0 /* Destination.swift in Sources */,
+				A9ED97A02B8251EC00C99DBF /* TravelListView.swift in Sources */,
+				A9ED979E2B80F0AF00C99DBF /* GetActivityImage.swift in Sources */,
 				A93A6EC12B42C87800FE1294 /* PlannerApp.swift in Sources */,
 				A93A6ED52B42DC4200FE1294 /* ChoosePlanView.swift in Sources */,
+				A9EEC72A2B84C7E60074C797 /* ActivityDetailView.swift in Sources */,
+				A9D793232B76425000F9EF4C /* Day.swift in Sources */,
 				A93A6ED12B42D05000FE1294 /* Plan.swift in Sources */,
 				A93A6ED32B42D2E400FE1294 /* PlanView.swift in Sources */,
+				A9D7932F2B77AD1400F9EF4C /* AddPlanView.swift in Sources */,
+				A9D793352B78D43400F9EF4C /* DayDetailView.swift in Sources */,
+				A92CCA132B7B985D009636B0 /* Park.swift in Sources */,
+				A9ED97982B80D26E00C99DBF /* DestinationView.swift in Sources */,
+				A9D7934B2B7A4D0200F9EF4C /* FetchDestinations.swift in Sources */,
+				A9D7932D2B77938800F9EF4C /* MainToolbarView.swift in Sources */,
+				A9D793292B7643DE00F9EF4C /* Activity.swift in Sources */,
+				A9D793312B77E8C500F9EF4C /* CalculateDates.swift in Sources */,
+				A911EBDF2B8350C800297B15 /* DayEndListView.swift in Sources */,
+				A976F8422B7E5DBD00EEF324 /* App.swift in Sources */,
+				A9ED979C2B80EF1E00C99DBF /* ActivityListView.swift in Sources */,
+				A9ED979A2B80EC5200C99DBF /* AddActivityListView.swift in Sources */,
 				A93A6ED72B432A0600FE1294 /* EditPlanView.swift in Sources */,
+				A9D7932B2B7792FB00F9EF4C /* TimesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

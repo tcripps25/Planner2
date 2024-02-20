@@ -1,5 +1,5 @@
 //
-//  ActivityListView.swift
+//  AddActivityListView.swift
 //  Planner
 //
 //  Created by Tom Work on 17/02/2024.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ActivityListView: View {
+struct AddActivityListView: View {
     var activity: ActivityChildDestination
     var dest: ActivityParentDestination
     @Query var parks: [Park]
@@ -40,7 +40,8 @@ struct ActivityListView: View {
                 let name = activity.name
                 let desc = ""
                 let time = Date.now
-                let newActivity = Activity(name: name, desc: desc, time: time, park: newPark)
+                let type = activity.entityType
+                let newActivity = Activity(name: name, desc: desc, time: time, park: newPark, type: type)
                 day.activities?.append(newActivity)
                 modelContext.insert(newActivity)
                 dismiss()

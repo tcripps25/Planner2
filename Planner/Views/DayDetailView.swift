@@ -17,7 +17,8 @@ struct DayDetailView: View {
     @State private var parkSelected = false
     @ViewBuilder
     var body: some View {
-       
+        let firstDest = selectedDay.activities!.sorted(by: { $0.time < $1.time }).first?.park
+        let lastDest = selectedDay.activities!.sorted(by: { $0.time < $1.time }).last?.park
         
         List {
             Section("Parks") {
@@ -36,18 +37,21 @@ struct DayDetailView: View {
                             .safeAreaPadding(.horizontal, 20)
             }
             Section {
-                DayStartListView()
-                ForEach(Array(selectedDay.activities!.enumerated()), id: \.element.id) { index, activity in
-                    ActivityListView(activity: activity, day: selectedDay)
-                    
-                    if index < selectedDay.activities!.count - 1 {
-                        let nextActivity = selectedDay.activities![index + 1]
-                        if activity.park?.name != nextActivity.park?.name {
-                            TravelListView()
+                DayStartListView(firstDest: firstDest)
+                ForEach(Array(selectedDay.activities!.sorted(by: { $0.time < $1.time }).enumerated()), id: \.element.id) { index, activity in
+                        ActivityListView(activity: activity, day: selectedDay)
+                        .background(
+                            NavigationLink(value: activity) {
+                            }.opacity(0)
+                            )
+                    if index < selectedDay.activities!.sorted(by: { $0.time < $1.time }).count - 1 {
+                        let nextActivity = selectedDay.activities!.sorted(by: { $0.time < $1.time })[index + 1]
+                        if activity.park?.id != nextActivity.park?.id {
+                            TravelListView(origin: activity.park!.name, dest: nextActivity.park!.name)
                         }
                     }
                 }
-                DayEndListView()
+                DayEndListView(lastDest: lastDest)
                 
                 Button("Add activities") {
                     showingAddSheet.toggle()
@@ -61,6 +65,8 @@ struct DayDetailView: View {
             }.listRowBackground(Color.clear)
             .listRowSeparator(.hidden)
             
+        }.navigationDestination(for: Activity.self) { activity in
+            ActivityDetailView(activity: activity, day: selectedDay)
         }.listStyle(.grouped)
             .navigationTitle("\(selectedDay.date, style: .date)")
             .navigationBarTitleDisplayMode(.inline)
@@ -80,6 +86,15 @@ struct DayDetailView: View {
             }
             .sheet(isPresented: $showingAddSheet) {
                 AddActivityView(day: $selectedDay)
+            }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        showingAddSheet.toggle()
+                    } label: {
+                        Label("Add activity", systemImage: "plus")
+                    }.disabled(selectedDay.parks!.isEmpty)
+                }
             }
     }
     

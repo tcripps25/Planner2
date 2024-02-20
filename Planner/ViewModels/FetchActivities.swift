@@ -27,8 +27,8 @@ struct ActivityChildDestination: Codable {
 }
 
 struct ActivityLocation: Codable {
-    let latitude: Double
-    let longitude: Double
+    let latitude: Double?
+    let longitude: Double?
 }
 
 
@@ -42,6 +42,7 @@ func LoadActivityData(locationId: String) async -> [ActivityParentDestination]? 
 
         if let decodedResponse = try? JSONDecoder().decode(ActivityParentDestination.self, from: data) {
             print("Worked")
+            print(url.absoluteString)
             return [decodedResponse]
             
         }

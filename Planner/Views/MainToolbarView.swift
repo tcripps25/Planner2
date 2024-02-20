@@ -14,7 +14,7 @@ struct MainToolbarView: ToolbarContent {
     @State private var showingSheet = false
     @State private var showingAddSheet = false
     @Query var plans: [Plan]
-    
+ 
     var body: some ToolbarContent {
         
         ToolbarItem(placement: .primaryAction) {
@@ -32,10 +32,11 @@ struct MainToolbarView: ToolbarContent {
                         ForEach(plans, id: \.self) { currentPlan in
                             Button {
                                 plan = currentPlan
+                              
                             } label: {
                                 HStack {
                                     Text(currentPlan.name)
-                                    if currentPlan.name == plan?.name {
+                                    if currentPlan.id == plan?.id {
                                         Image(systemName: "checkmark")
                                         }
                                     }

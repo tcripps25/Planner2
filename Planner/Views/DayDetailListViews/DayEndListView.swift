@@ -8,24 +8,33 @@
 import SwiftUI
 
 struct DayEndListView: View {
+    var lastDest: Park?
     var body: some View {
-        ZStack(alignment: .leading) {
+        HStack {
             VStack(alignment: .leading, spacing: 0) {
                 Rectangle()
-                    .fill(Color.mint)
+                    .fill(Color("interfaceHighlightColor"))
                     .frame(maxHeight: .infinity)
-                    .frame(width: 5)
+                    .frame(width: 4)
                     .offset(x: 40)
                 Circle()
-                    .fill(Color.mint)
+                    .fill(Color("interfaceHighlightColor"))
                     .frame(width: 15, height: 20)
                     .offset(x: 35, y: -15)
             }
-            VStack(alignment: .leading) {
-                Text("End day")
-                    .font(.system(size: 13))
+            ZStack(alignment: .leading) {
+               
+                VStack(alignment: .center, spacing: 5) {
+                    if let lastDest {
+                        Text("End at \(lastDest.name)")
+                    } else {
+                        Text("End of the day")
+                    }
+                    
+                }.frame(maxWidth: .infinity).font(.system(size: 12))
                     .opacity(0.7)
-            }.frame(maxWidth:.infinity)
+                    .padding(.all, 10)
+            }.padding(.vertical, 5)
         }.listRowInsets(EdgeInsets())
             .frame(height: 45)
     }

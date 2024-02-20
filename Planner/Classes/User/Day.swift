@@ -10,13 +10,15 @@ import SwiftData
 
 @Model
 class Day: Identifiable, Equatable {
+    var id: UUID
     var date: Date
-    var locations: [UserLocation]?
-    var activities: [UserActivity]?
+    var parks: [Park]?
+    var activities: [Activity]?
     
-    init(date: Date, locations: [UserLocation]? = [], activities: [UserActivity]? = []) {
+    init(date: Date, activities: [Activity]? = [], parks: [Park]? = [], id: UUID = UUID()) {
+        self.id = id
         self.date = date
-        self.locations = locations
+        self.parks = parks
         self.activities = activities
     }
 }

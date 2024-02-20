@@ -14,18 +14,38 @@ struct ItineraryView: View {
     @State var path = NavigationPath()
     
     var body: some View {
+        
+        
         NavigationStack(path: $path) {
-            List(plan!.days) { day in
-                Section("\(day.date, style: .date)") {
-                    NavigationLink(value: day) {
-                        if day.activities?.isEmpty == true {
-                            Text("No activities today")
+            List {
+                DestinationView(destination: plan!.destination ?? Destination(id: "0000", name: "Test Destination", slug: "waltdisneyworldresort"))
+               
+                Section("Overview") {
+                    ForEach(plan!.days.sorted(by: { $0.date < $1.date }), id: \.id) { day in
+                        NavigationLink(value: day) {
+                            VStack(alignment: .leading) {
+                                Text("\(formatDate(date: day.date))")
+                                    .font(.system(size: 16))
+                                    .fontWeight(.semibold)
+                                VStack(alignment: .leading) {
+                                    ForEach(day.parks!) { park in
+                                        Text(park.name)
+                                    }.font(.system(size: 13))
+                                }.padding(.vertical)
+                                if day.activities?.isEmpty == true {
+                                    Text("No activities today")
+                                        .font(.system(size: 13))
+                                } else {
+                                    
+                                    Text("\(day.activities!.count) activities today")
+                                        .font(.system(size: 13))
+                                }
+                            }
                         }
-                    }
-                }
-                
+            }
+                        }
             }.navigationDestination(for: Day.self) { day in
-                DayDetailView(plan: $plan, selectedDay: day, path: $path, locations: [])
+                DayDetailView(plan: $plan, selectedDay: day, path: $path)
             }
             .listStyle(.grouped)
             

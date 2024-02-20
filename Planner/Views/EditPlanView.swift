@@ -31,8 +31,8 @@ struct EditPlanView: View {
                     TextField("Details", text: $plan.details, axis: .vertical)
                 }
                 
-                DatePicker("Arrival Date", selection: $plan.date.start)
-                DatePicker("Departure Date", selection: $plan.date.end)
+                DatePicker("Arrival Date", selection: $plan.date.start, displayedComponents: .date)
+                DatePicker("Departure Date", selection: $plan.date.end, displayedComponents: .date)
             }
             .toolbar {
                 Button {
@@ -43,7 +43,7 @@ struct EditPlanView: View {
             }
             .navigationTitle("Settings")
             .sheet(isPresented: $showingPlanChooser) {
-                ChoosePlanView(selectedPlan: $selectedPlan, onSheet: true)
+                ChoosePlanView(currentPlan: $selectedPlan, onSheet: true)
             }
         }
     }

@@ -8,29 +8,39 @@
 import SwiftUI
 
 struct DayStartListView: View {
+    var firstDest: Park?
     var body: some View {
-        ZStack(alignment: .leading) {
-            VStack(alignment: .leading, spacing: 0) {
-                Circle()
-                    .fill(Color.mint)
-                    .frame(width: 15, height: 20)
-                    .offset(x: 35, y: 15)
-                Rectangle()
-                    .fill(Color.mint)
-                    .frame(maxHeight: .infinity)
-                    .frame(width: 5)
-                    .offset(x: 40)
-            }
-            VStack(alignment: .leading) {
-                Text("Start day")
-                    .font(.system(size: 13))
+        HStack {
+                VStack(alignment: .leading, spacing: 0) {
+                    Circle()
+                        .fill(Color("interfaceHighlightColor"))
+                        .frame(width: 15, height: 20)
+                        .offset(x: 35, y: 15)
+                    Rectangle()
+                        .fill(Color("interfaceHighlightColor"))
+                        .frame(maxHeight: .infinity)
+                        .frame(width: 4)
+                        .offset(x: 40)
+                }
+            ZStack(alignment: .leading) {
+               
+                VStack(alignment: .center, spacing: 5) {
+                    if let firstDest {
+                        Text("Start at \(firstDest.name)")
+                    } else {
+                        Text("Start of the day")
+                    }
+                    
+                }.frame(maxWidth: .infinity).font(.system(size: 12))
                     .opacity(0.7)
-            }.frame(maxWidth:.infinity)
+                    .padding(.all, 10)
+            }.padding(.vertical, 5)
+            
         }.listRowInsets(EdgeInsets())
             .frame(height: 45)
     }
 }
 
-#Preview {
+/*#Preview {
     DayStartListView()
-}
+}*/
