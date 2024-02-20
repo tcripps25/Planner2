@@ -1,5 +1,5 @@
 //
-//  ItineraryView.swift
+//  WishesView.swift
 //  Planner
 //
 //  Created by Tom Work on 02/01/2024.
@@ -8,12 +8,15 @@
 import SwiftUI
 import SwiftData
 
-struct ItineraryView: View {
+struct WishesView: View {
     @Binding var plan: Plan?
     
     var body: some View {
-        Text(plan?.name ?? "No Plan Found")
-            .navigationTitle("Itinerary")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            .navigationTitle("Wishes")
+            .toolbar {
+                MainToolbarView(plan: $plan)
+            }
     }
 }
 
@@ -23,7 +26,7 @@ struct ItineraryView: View {
        let container = try ModelContainer(for: Plan.self, configurations: config)
 
        let example = Plan(name: "Test Plan", date: DateInterval(), details: "Plan details here")
-       return ItineraryView(plan: .constant(example))
+       return WishesView(plan: .constant(example))
            .modelContainer(container)
    } catch {
        fatalError("Failed to create model container.")

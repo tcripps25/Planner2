@@ -16,9 +16,9 @@ struct ChoosePlanView: View {
     @Binding var selectedPlan: Plan?
     @State var onSheet: Bool?
     
-    
-    
     var body: some View {
+       
+        
         NavigationStack {
             List {
                 ForEach(plans) { plan in
@@ -34,34 +34,21 @@ struct ChoosePlanView: View {
                                 Text(plan.name)
                                     .font(.headline)
                                 
-                                Text(plan.date.start.formatted(date: .long, time: .shortened))
+                               
+                                    Text(plan.date.start.formatted(date: .long, time: .shortened))
+                                
                             }
                         })
                     
                 }.onDelete(perform: deletePlans)
             }.toolbar {
-                Button("Add Plan", systemImage: "plus", action: addPlan)
-                Button("Add Samples", action: addSamples)
+                MainToolbarView(plan: $selectedPlan)
             }
         }
     }
-    func addSamples() {
-        let rome = Plan(name: "Rome")
-        let florence = Plan(name: "Florence")
-        let naples = Plan(name: "Naples")
-        
-        modelContext.insert(rome)
-        modelContext.insert(florence)
-        modelContext.insert(naples)
-    }
+   
     
-    func addPlan() {
-        let plan = Plan()
-        plan.selectedTab = "settings"
-        modelContext.insert(plan)
-        selectedPlan = plan
-        
-    }
+   
     
     func deletePlans(_ indexSet: IndexSet) {
         for index in indexSet {

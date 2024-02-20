@@ -18,9 +18,7 @@ struct PlanView: View {
         
         
         TabView() {
-            NavigationStack {
                 ItineraryView(plan: $plan)
-            }
                 .tag("Itinerary")
                     .tabItem {
                         Label("Itinerary", systemImage: "list.star")
@@ -33,11 +31,11 @@ struct PlanView: View {
                     Label("Wishes", systemImage: "star")
                 }
             NavigationStack {
-                EditPlanView(plan: plan!, selectedPlan: $plan)
+                TimesView(plan: $plan)
             }
-                .tag("Settings")
+                .tag("Times")
                 .tabItem {
-                    Label("Settings", systemImage: "gearshape.fill")
+                    Label("Times", systemImage: "clock")
                 }
         }
     }
